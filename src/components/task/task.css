@@ -1,0 +1,72 @@
+.task {
+    display: grid;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 3px solid var(--grey-2);
+    height: 70px;
+    grid-template:
+        "st na la de de" minmax(0, 1fr)
+        "st du la de de" minmax(0, 1fr)
+        "st fr la de de" minmax(0, 1fr)
+        / minmax(0, 1fr) minmax(0, 2fr) minmax(0, 2fr) minmax(0, 2fr) minmax(0, 2fr);
+    ;
+}
+
+.task-field {
+    padding: 5px;
+    min-width: 0;
+    height: 100%;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.task-status {
+    grid-area: st;
+    position: relative;
+    height: 100%;
+}
+
+.task-status-bubble {
+    position: absolute;
+    inset: 0 10% auto auto;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.task-name {
+    grid-area: na;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.task-due-date {
+    grid-area: du;
+}
+
+.task-frequency {
+    grid-area: fr;
+}
+
+.task-description {
+    grid-area: de;
+    align-self: start;
+}
+
+.task-labels {
+    grid-area: la;
+    align-self: start;
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+
+.task-label {
+    padding: 2.5px 5px;
+    background-color: lightgrey;
+    border-radius: 5px;
+}

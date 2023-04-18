@@ -1,0 +1,13 @@
+.task-feed {
+    padding: 20px 30px;
+}
+
+.task-feed-heading {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-feed-title {
+    font-size: 32px;
+}
